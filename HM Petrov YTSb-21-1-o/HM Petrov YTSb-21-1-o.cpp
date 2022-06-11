@@ -2,6 +2,7 @@
 
 int main()
 {
+    /*
     //6 неделя
     float x, y;
     float r = 1;
@@ -20,7 +21,7 @@ int main()
         std::cout << "No";
     }
 
-/*
+
     float x, y;
     float r = 1;
     std::cout << "Wright X and Y coordinate \n";
