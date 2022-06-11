@@ -9,6 +9,24 @@ int main()
     std::cin >> x >> y;
     float l = sqrt(x * x + y * y);
     if (l < r) {
+        if (y < (x/2)) {
+            std::cout << "Yes";
+         }
+        else {
+            std::cout << "No";
+         }
+    }
+    else {
+        std::cout << "No";
+    }
+
+/*
+    float x, y;
+    float r = 1;
+    std::cout << "Wright X and Y coordinate \n";
+    std::cin >> x >> y;
+    float l = sqrt(x * x + y * y);
+    if (l < r) {
         if (x > 0 && x < 1) {
             if (y > x) {
                 std::cout << "Yes";
@@ -25,7 +43,7 @@ int main()
     else {
         std::cout << "No";
     }
-
+*/
         /*
         // 5 неделя
         int x, y;
