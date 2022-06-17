@@ -5,7 +5,17 @@ int main()
 {
 
     //7-8 неделя
+
+
+
 /*
+
+
+
+
+
+
+
     float x, a, y;
     y = 0;
     std::cout << "Wright number and x " << "\n";
@@ -24,6 +34,12 @@ int main()
         y = sqrt(2 + 3 * i) + 72 * i + tan(4 * i + 31);
         std::cout << y << "\n";
     }
+
+
+
+
+
+
 
     int x;
     std::cout << "Wgirht how lines you wont ";
@@ -54,6 +70,9 @@ int main()
     else {
         std::cout << "No";
     }
+
+
+
 
 
     float x, y;
@@ -94,6 +113,10 @@ int main()
             y = 0;
 
         std::cout << "y = "<<y<< "\n";
+
+
+
+
 
         int x, y;
         y = 0;
