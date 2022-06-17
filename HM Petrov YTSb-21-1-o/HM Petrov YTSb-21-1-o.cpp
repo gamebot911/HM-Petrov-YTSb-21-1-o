@@ -1,8 +1,42 @@
 ﻿#include <iostream>
+#include <cmath>
 
 int main()
 {
-    /*
+
+    //7-8 неделя
+/*
+    float x, a, y;
+    y = 0;
+    std::cout << "Wright number and x " << "\n";
+    std::cin >> a >> x;
+
+    for (float i = 1; i <= a; i++) {
+        y += (1 / i * x);
+        std::cout << y << "\n";
+    }
+    std::cout << "Y= " << y << "\n";
+
+    float x, a, b, y;
+    std::cout << "Wright A to B and shag ";
+    std::cin >> a >> b >> x;
+    for (float i = a; i <= b; i += x) {
+        y = sqrt(2 + 3 * i) + 72 * i + tan(4 * i + 31);
+        std::cout << y << "\n";
+    }
+
+    int x;
+    std::cout << "Wgirht how lines you wont ";
+    std::cin >> x;
+
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j <= i; j++) {
+            std::cout << "0";
+        }
+        std::cout << "\n";
+    }
+
+
     //6 неделя
     float x, y;
     float r = 1;
@@ -44,8 +78,8 @@ int main()
     else {
         std::cout << "No";
     }
-*/
-        /*
+
+        
         // 5 неделя
         int x, y;
         y = 0;
@@ -74,6 +108,5 @@ int main()
 
         std::cout << "y = " << y << "\n";
         */
-
 }
 
