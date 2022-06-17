@@ -8,7 +8,37 @@ int main()
 
 
 
+
+
+
+
+
+
 /*
+    int x,y;
+    y = 1;
+    std::cout << "Wright factorial number \n";
+    std::cin >> x;
+    for (int i = 1; i <= x; i++)
+        y *= i;
+    std::cout << "Factorial you number = " << y;
+    
+    
+
+
+
+
+
+
+
+    int m, n, h;
+    std::cout << "Wright M to N and shag H \n";
+    std::cin >> m >> n >> h;
+    for (int i = m; i <= n; i += h) {
+        std::cout << i<<" ";
+    }
+
+
 
 
 
