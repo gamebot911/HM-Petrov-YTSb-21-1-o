@@ -13,8 +13,23 @@ int main()
 
 
 
-
 /*
+    int xc, y, x;
+    x = 1;
+    std::cout << "Wright Number and extent \n";
+    std::cin >> xc >> y;
+    for (int i = 1; i <= y; i++) {
+        x *= xc;
+    }
+    std::cout << "X in your extent = "<<x;
+
+
+
+
+
+
+
+
     int x,y;
     y = 1;
     std::cout << "Wright factorial number \n";
@@ -32,7 +47,7 @@ int main()
 
 
     int m, n, h;
-    std::cout << "Wright M to N and shag H \n";
+    std::cout << "Wright M to N and step H \n";
     std::cin >> m >> n >> h;
     for (int i = m; i <= n; i += h) {
         std::cout << i<<" ";
@@ -57,8 +72,12 @@ int main()
     }
     std::cout << "Y= " << y << "\n";
 
+
+
+
+
     float x, a, b, y;
-    std::cout << "Wright A to B and shag ";
+    std::cout << "Wright A to B and step ";
     std::cin >> a >> b >> x;
     for (float i = a; i <= b; i += x) {
         y = sqrt(2 + 3 * i) + 72 * i + tan(4 * i + 31);
@@ -91,10 +110,10 @@ int main()
     float l = sqrt(x * x + y * y);
     if (l < r) {
         if (y < (x/2)) {
-            std::cout << "Yes";
+            std::cout << "Yes, your point in the area";
          }
         else {
-            std::cout << "No";
+            std::cout << "No, your point not in the area";
          }
     }
     else {
@@ -142,7 +161,7 @@ int main()
         if (x == 0)
             y = 0;
 
-        std::cout << "y = "<<y<< "\n";
+        std::cout << "y = "<<y<<"\n";
 
 
 
