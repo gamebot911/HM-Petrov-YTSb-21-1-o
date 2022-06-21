@@ -61,12 +61,14 @@ int main()
 
 
 
+
     float x, a, y;
     y = 0;
     std::cout << "Wright number and x " << "\n";
     std::cin >> a >> x;
-
-    for (float i = 1; i <= a; i++) {
+    float i = 0;
+    while (i <= a-1) {
+        i++;
         y += (1 / i * x);
         std::cout << y << "\n";
     }
@@ -76,15 +78,16 @@ int main()
 
 
 
+
     float x, a, b, y;
     std::cout << "Wright A to B and step ";
     std::cin >> a >> b >> x;
-    for (float i = a; i <= b; i += x) {
+    float i = a;
+    while (i <= b-1) {
+        i += x;
         y = sqrt(2 + 3 * i) + 72 * i + tan(4 * i + 31);
         std::cout << y << "\n";
     }
-
-
 
 
 
