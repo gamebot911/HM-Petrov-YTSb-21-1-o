@@ -10,10 +10,33 @@ int main()
 
 
 
-
-
-
 /*
+
+    
+    int a, b;
+    std::cout << "Wright from 3 to 27 \n";
+    std::cin >> a;
+    b = 0;
+    for (int i = 1; i <= 9; i++) {
+        for (int j = 1; j <= 9; j++) {
+            for (int k = 1; k <= 9; k++) {
+                if ((i + j + k) == a) {
+                    b += 1;
+                    std::cout << i << j << k<<"\n";
+                }
+            }
+        }
+    }
+    std::cout << "Your number is made up of " << b << " sums of 3 numbers. \n";
+
+
+    
+    
+    
+    
+    
+    
+    
     int xc, y, x;
     x = 1;
     std::cout << "Wright Number and extent \n";
