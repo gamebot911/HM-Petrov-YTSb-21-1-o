@@ -6,6 +6,9 @@ void DigitCountSum(int k, int& c, int& s);
 void Swap(float& x, float& y);
 void ShiftRight3(float& a, float& b, float& c);
 void ShiftLeft3(float& a, float& b, float& c);
+float RingS(float r1, float r2);
+
+const float pi = 3.14;
 
 int main()
 {
@@ -17,6 +20,19 @@ int main()
 
 
 /*
+
+
+    float r1, r2;
+    std::cout << "Write R1 and R2\n";
+    std::cin >> r1 >> r2;
+    if (r1 > r2)
+        Swap(r1, r2);
+    std::cout << "Ring square is " << RingS(r1, r2);
+
+
+
+
+
     float a, b, c;
     std::cout << "Write A B C\n";
     std::cin >> a >> b >> c;
@@ -350,4 +366,11 @@ void ShiftLeft3(float& a, float& b, float& c) {
     c = a;
     a = b;
     b = x;
+}
+float RingS(float r1, float r2) {
+    float s1, s2, sr;
+    s1 = pi * r1 * 2;
+    s2 = pi * r2 * 2;
+    sr = s2 - s1;
+    return sr;
 }
