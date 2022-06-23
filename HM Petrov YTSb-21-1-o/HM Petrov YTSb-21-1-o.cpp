@@ -6,6 +6,14 @@ int main()
 
     //7-8 неделя
 
+
+
+
+
+
+
+
+/*
     float a, b, x,m;
     std::cout << "Write how much money you put in the bank, how much money do you want to receive, write interest rate.\n";
     std::cin >> a >> b >> x;
@@ -23,7 +31,7 @@ int main()
 
 
 
-/*
+
     for (int x = 0; x <= 100; x++) {
         for (int y = 0; y <= 100; y++) {
             for (int z = 0; z <= 100; z++) {
