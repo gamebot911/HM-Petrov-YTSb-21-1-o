@@ -11,6 +11,9 @@ float Calc(float a, float b, int op);
 int Quarter(int x, int y);
 bool Even(int k);
 bool IsPower5(int k);
+void TimeToHMS(int t, int&h, int&m, int&s);
+void IncTime(int&h, int&m, int&s, int t);
+
 
 
 const float pi = 3.14;
@@ -25,10 +28,40 @@ int main()
 
 
 
-
-
-
 /*
+    int t, h, m, s;
+    std::cout << "Write Hour minutes seconds and +seconds\n";
+    std::cin >> h>>m>>s>>t;
+    while (s >= 60) {
+        m++;
+        s -= 60;
+    }
+    while (m >= 60) {
+        h++;
+        m -= 60;
+    }
+    IncTime(h, m, s, t);
+    std::cout << h << " hour " << m << " minutes " << s << " seconds\n";
+
+
+
+
+
+    int t, h, m, s;
+    h = 0;
+    m = 0;
+    s = 0;
+    std::cout << "Write secinds\n";
+    std::cin >> t;
+    TimeToHMS(t, h, m, s);
+    std::cout << h << " hour " << m << " minutes " << s << " seconds\n";
+
+
+
+
+
+
+
     int k=0;
     std::cout << "Write 10 numbers \n";
     for (int i = 1; i <= 10; i++) {
@@ -481,4 +514,34 @@ bool IsPower5(int k) {
         return true;
     else
         return false;
+}
+void TimeToHMS(int t, int&h, int&m, int&s) {
+    while (t >= 3600) {
+        t -= 360;
+        h++;
+    }
+    while (t >= 60) {
+        t -= 60;
+        m++;
+    }
+    s = t;
+}
+void IncTime(int&h, int&m, int&s, int t) {
+    while (t >= 3600) {
+        t -= 360;
+        h++;
+    }
+    while (t >= 60) {
+        t -= 60;
+        m++;
+    }
+    s += t;
+    while (s >= 60) {
+        m++;
+        s -= 60;
+    }
+    while (m >= 60) {
+        h++;
+        m -= 60;
+    }
 }
