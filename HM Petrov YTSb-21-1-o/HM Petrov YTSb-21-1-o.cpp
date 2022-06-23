@@ -14,10 +14,6 @@ int main(){
 
 
 
-
-
-
-
 /*
     myTime t1,t2;
 
