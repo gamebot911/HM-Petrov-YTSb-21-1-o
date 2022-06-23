@@ -3,27 +3,37 @@
 #include "myF.h"
 
 
-int main()
-{
+int main(){
+
     //11-12 неделя
 
+
+
+
+
+
+
+
+
+
+
+
 /*
-    myTime t1;
-    t1.hour = 10;
-    t1.minutes = 10;
-    t1.seconds = 10;
+    myTime t1,t2;
 
+    std::cout << "Write First time Hour Minutes Seconds\n";
+    std::cin >> t1.hour >> t1.minutes >> t1.seconds;
+    IncTime(t1.hour, t1.minutes, t1.seconds, 0);
+    std::cout << "First time " << t1.hour << ":" << t1.minutes << ":" << t1.seconds<<"\n";
+    std::cout << "Write Second time Hour Minutes Seconds\n";
+    std::cin >> t2.hour >> t2.minutes >> t2.seconds;
+    IncTime(t2.hour, t2.minutes, t2.seconds, 0);
+    std::cout << "Second time " << t2.hour << ":" << t2.minutes << ":" << t2.seconds << "\n"
 
-    myTime t2;
-    t2.hour = 15;
-    t2.minutes = 35;
-    t2.seconds = 50;
-
-
- if (timeS(t1, t2))
-     std::cout << "First time is bigger then Second time\n";
- else
-     std::cout << "Second time is bigger then First";
+    if (timeS(t1, t2))
+        std::cout << "First time is bigger then Second time\n";
+    else
+        std::cout << "Second time is bigger then First";
 
 
 
