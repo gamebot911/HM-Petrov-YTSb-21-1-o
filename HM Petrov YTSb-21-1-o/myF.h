@@ -1,5 +1,11 @@
 ﻿#pragma once
+
 const float pi = 3.14;
+struct myTime {
+    int hour;
+    int minutes;
+    int seconds;
+};
 
 void RectPS(float x1, float y1, float x2, float y2, float& p, float& s) {
     /*Описать функцию RectPS(x1, y1, x2, y2, P, S), вычисляющую периметр P и площадь
@@ -210,7 +216,7 @@ void yotx(float x, float& y) {
         y = (2 * x + 1) * (2 * x + 1);
 }
 
-bool timeS(int a, int b) {
+bool timeS(struct myTime a, struct myTime b) {
     /*Написать функцию, которая сравнивает два времени. Возвращает true, если
 первый аргумент больше второго.*/
 
@@ -220,5 +226,5 @@ bool timeS(int a, int b) {
     if (at > bt)
         return true;
     else
-
+        return false;
 }
