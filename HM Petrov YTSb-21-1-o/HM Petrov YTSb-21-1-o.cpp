@@ -14,6 +14,7 @@ bool IsPower5(int k);
 void TimeToHMS(int t, int&h, int&m, int&s);
 void IncTime(int&h, int&m, int&s, int t);
 float Leng(float xA, float yA, float xB, float yB);
+void yotx(float x, float& y);
 
 
 
@@ -21,8 +22,6 @@ const float pi = 3.14;
 
 int main()
 {
-    //9-10 неделя
-
 
 
 
@@ -30,6 +29,24 @@ int main()
 
 
 /*
+    //9-10 неделя
+
+    float y,x,a,h;
+    y = 0;
+    x = 0;
+    std::cout << "Write y(x) to your number, and step\n";
+    std::cin >> a >> h;
+    while (x < a) {
+        yotx(x, y);
+        x+=h;
+        std::cout << "y(" << x << ") =" << y << "\n";
+    }
+
+
+
+
+
+
     float xA, xB, xC, xD, yA, yB, yC, yD;
     std::cout << "Write A(x;y), B(x,y), C(x,y), D(x,y)\n";
     std::cin >> xA >> yA >> xB >> yB >> xC >> yC >> xD >> yD;
@@ -559,4 +576,12 @@ void IncTime(int&h, int&m, int&s, int t) {
 }
 float Leng(float xA, float yA, float xB, float yB) {
     return sqrt((xA - xB) * (xA - xB) + (yA - yB) * (yA - yB));
+}
+void yotx(float x, float& y) {
+    if (x > 3)
+        y = 2 * x - 10;
+    if (x == 3)
+        y = 10;
+    if (x < 3)
+        y = (2 * x + 1) * (2 * x + 1);
 }
