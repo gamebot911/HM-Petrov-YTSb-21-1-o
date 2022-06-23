@@ -10,6 +10,7 @@ float RingS(float r1, float r2);
 float Calc(float a, float b, int op);
 int Quarter(int x, int y);
 bool Even(int k);
+bool IsPower5(int k);
 
 
 const float pi = 3.14;
@@ -23,7 +24,26 @@ int main()
 
 
 
+
+
+
+
 /*
+    int k=0;
+    std::cout << "Write 10 numbers \n";
+    for (int i = 1; i <= 10; i++) {
+        int g;
+        std::cin >> g;
+        if (IsPower5(g))
+            k++;
+    }
+    std::cout << k << " numbers to the 5th power.";
+
+
+
+
+
+
     int kl = 0;
     std::cout << "Write 10 numbers\n";
     for (int i = 1; i <= 10; i++) {
@@ -449,6 +469,15 @@ int Quarter(int x, int y) {
 bool Even(int k) {
     
     if ((k%2) == 0)
+        return true;
+    else
+        return false;
+}
+bool IsPower5(int k) {
+    int x = 1;
+    while (x < k)
+        x *= 5;
+    if (x == k)
         return true;
     else
         return false;
