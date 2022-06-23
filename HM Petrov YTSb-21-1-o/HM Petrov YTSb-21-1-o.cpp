@@ -7,6 +7,7 @@ void Swap(float& x, float& y);
 void ShiftRight3(float& a, float& b, float& c);
 void ShiftLeft3(float& a, float& b, float& c);
 float RingS(float r1, float r2);
+float Calc(float a, float b, int op);
 
 const float pi = 3.14;
 
@@ -20,6 +21,17 @@ int main()
 
 
 /*
+
+    float a, b;
+    int c;
+    std::cout << "Write A nd B numbers and chuse operation: 1- a-b, 2 - a*b, 3 - a/b, other values - a+b. \n";
+    std::cin >> a >> b >> c;
+    std::cout << "Answer is " << Calc(a, b, c);
+
+
+
+
+
 
 
     float r1, r2;
@@ -373,4 +385,21 @@ float RingS(float r1, float r2) {
     s2 = pi * r2 * 2;
     sr = s2 - s1;
     return sr;
+}
+float Calc(float a, float b, int op) {
+    float z;
+    switch (op) {
+    case 1:
+        z = a - b;
+        break;
+    case 2:
+        z = a * b;
+        break;
+    case 3:
+        z = a / b;
+        break;
+    default:
+        z = a + b;
+    }
+    return z;
 }
