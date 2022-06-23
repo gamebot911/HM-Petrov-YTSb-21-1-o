@@ -4,6 +4,9 @@
 void RectPS(float x1, float y1, float x2, float y2, float&P, float&S);
 void DigitCountSum(int k, int& c, int& s);
 void Swap(float& x, float& y);
+void ShiftRight3(float& a, float& b, float& c);
+void ShiftLeft3(float& a, float& b, float& c);
+
 int main()
 {
     //9-10 неделя
@@ -13,10 +16,31 @@ int main()
 
 
 
-
-
-
 /*
+    float a, b, c;
+    std::cout << "Write A B C\n";
+    std::cin >> a >> b >> c;
+    ShiftLeft3(a, b, c);
+    std::cout << "A=" << a << " B=" << b << " C=" << c;
+
+
+
+
+
+
+    float a, b, c;
+    std::cout << "Write A B C\n";
+    std::cin >> a >> b >> c;
+    ShiftRight3(a, b, c);
+    std::cout <<"A="<<a<<" B="<<b<<" C="<<c;
+
+
+
+
+
+
+
+
     float a, b, c, d;
     std::cout << "Write A, B, C, D\n";
     std::cin >> a >> b >> c >> d;
@@ -312,4 +336,18 @@ void Swap(float& x, float& y) {
     b = x;
     x = y;
     y = b;
+}
+void ShiftRight3(float& a, float& b, float& c) {
+    float x;
+    x = c;
+    c = b;
+    b = a;
+    a = x;
+}
+void ShiftLeft3(float& a, float& b, float& c) {
+    float x;
+    x = c;
+    c = a;
+    a = b;
+    b = x;
 }
