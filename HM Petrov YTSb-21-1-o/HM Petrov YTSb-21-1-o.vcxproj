@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="HM Petrov YTSb-21-1-o.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myF.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
