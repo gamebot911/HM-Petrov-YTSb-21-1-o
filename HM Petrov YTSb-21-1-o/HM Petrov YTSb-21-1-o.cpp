@@ -3,13 +3,30 @@
 #include "myF.h"
 
 
+struct myTime {
+    int hour;
+    int minutes;
+    int seconds;
+};
+
 int main()
 {
     //11-12 неделя
 
+    myTime t1;
+    t1.hour = 10;
+    t1.minutes = 10;
+    t1.seconds = 10;
 
 
+    myTime t2;
+    t2.hour = 15;
+    t2.minutes = 35;
+    t2.seconds = 50;
 
+
+    if (timeS(t1, t2))
+        std::cout << "First time is bigger then Second time\n";
 
 
     /*
