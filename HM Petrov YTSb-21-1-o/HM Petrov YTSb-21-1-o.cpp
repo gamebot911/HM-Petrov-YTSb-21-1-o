@@ -13,6 +13,7 @@ bool Even(int k);
 bool IsPower5(int k);
 void TimeToHMS(int t, int&h, int&m, int&s);
 void IncTime(int&h, int&m, int&s, int t);
+float Leng(float xA, float yA, float xB, float yB);
 
 
 
@@ -29,6 +30,17 @@ int main()
 
 
 /*
+    float xA, xB, xC, xD, yA, yB, yC, yD;
+    std::cout << "Write A(x;y), B(x,y), C(x,y), D(x,y)\n";
+    std::cin >> xA >> yA >> xB >> yB >> xC >> yC >> xD >> yD;
+    std::cout << "AB =" << Leng(xA, yA, xB, yB) << " AC=" << Leng(xA, yA, xC, yC) << " AD=" << Leng(xA, yA, xD, yD);
+
+
+
+
+
+
+
     int t, h, m, s;
     std::cout << "Write Hour minutes seconds and +seconds\n";
     std::cin >> h>>m>>s>>t;
@@ -544,4 +556,7 @@ void IncTime(int&h, int&m, int&s, int t) {
         h++;
         m -= 60;
     }
+}
+float Leng(float xA, float yA, float xB, float yB) {
+    return sqrt((xA - xB) * (xA - xB) + (yA - yB) * (yA - yB));
 }
