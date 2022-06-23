@@ -1,19 +1,33 @@
 ﻿#include <iostream>
 #include <cmath>
 
+void RectPS(float x1, float y1, float x2, float y2, float&P, float&S);
+
+
 int main()
 {
-
-    //7-8 неделя
-
-
-
+    //9-10 неделя
 
 
 
 
 
 /*
+
+    float x1, x2, y1, y2, p, s;
+    std::cout << "Write A(x1;y1), B(x2;y2) points coortinates. C(0;0)\n";
+    std::cin >> x1 >> y1 >> x2 >> y2;
+    p = 0;
+    s = 0;
+    RectPS(x1, y1, x2, y2, p, s);
+    std::cout << "P= " << p << " ,and S= " << s << "\n";
+
+
+
+
+
+
+    //7-8 неделя
     float a, b, x,m;
     std::cout << "Write how much money you put in the bank, how much money do you want to receive, write interest rate.\n";
     std::cin >> a >> b >> x;
@@ -246,3 +260,13 @@ int main()
         */
 }
 
+void RectPS(float x1, float y1, float x2, float y2, float&p, float&s) {
+    float a,b,c;
+
+    a = sqrt((0 - x1) * (0 - x1) + (0 - y1) * (0 - y1));
+    b = sqrt((0 - x2) * (0 - x2) + (0 - y2) * (0 - y2));
+    c = sqrt(a * a + b * b);
+    p = a + b + c;
+    s = a * b / 2;
+    
+}
