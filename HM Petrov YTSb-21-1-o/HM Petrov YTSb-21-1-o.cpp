@@ -8,6 +8,9 @@ void ShiftRight3(float& a, float& b, float& c);
 void ShiftLeft3(float& a, float& b, float& c);
 float RingS(float r1, float r2);
 float Calc(float a, float b, int op);
+int Quarter(int x, int y);
+bool Even(int k);
+
 
 const float pi = 3.14;
 
@@ -21,6 +24,33 @@ int main()
 
 
 /*
+    int kl = 0;
+    std::cout << "Write 10 numbers\n";
+    for (int i = 1; i <= 10; i++) {
+        int k;
+        std::cin >> k;
+        if (Even(k))
+            kl++;
+    }
+    std::cout << kl << " numbers is even";
+
+
+
+
+
+
+
+
+    int x, y;
+    std::cout << "Write X and Y coordinate\n";
+    std::cin >> x >> y;
+    std::cout << "Your point in " << Quarter(x, y) << " quarter";
+
+
+
+
+
+
 
     float a, b;
     int c;
@@ -402,4 +432,24 @@ float Calc(float a, float b, int op) {
         z = a + b;
     }
     return z;
+}
+int Quarter(int x, int y) {
+    if (x > 0) {
+        if (y > 0)
+            return 1;
+        return 4;
+    }
+    else {
+        if (y > 0)
+            return 2;
+        else
+            return 3;
+    }
+}
+bool Even(int k) {
+    
+    if ((k%2) == 0)
+        return true;
+    else
+        return false;
 }
