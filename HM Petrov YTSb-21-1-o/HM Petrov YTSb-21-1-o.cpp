@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <cmath>
-#include "myF.h"
+#include "myFnS.h"
 
 
 int main(){
