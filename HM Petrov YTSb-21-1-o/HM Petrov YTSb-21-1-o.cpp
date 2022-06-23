@@ -2,8 +2,8 @@
 #include <cmath>
 
 void RectPS(float x1, float y1, float x2, float y2, float&P, float&S);
-
-
+void DigitCountSum(int k, int& c, int& s);
+void Swap(float& x, float& y);
 int main()
 {
     //9-10 неделя
@@ -12,7 +12,37 @@ int main()
 
 
 
+
+
+
+
 /*
+    float a, b, c, d;
+    std::cout << "Write A, B, C, D\n";
+    std::cin >> a >> b >> c >> d;
+    Swap(a, b);
+    Swap(c, d);
+    Swap(b, c);
+    std::cout << "A=" << a << " B=" << b << " C=" << c << " D=" << d;
+
+
+
+
+
+
+    int k, s, c;
+    s = 0;
+    c = 0;
+    std::cout << "Write K, K>0! \n";
+    std::cin >> k;
+    if (k <= 0)
+        std::cout << "You write k<=0";
+    DigitCountSum(k, c, s);
+    std::cout << "The entered number consists of " << c << ", and their sum is equal to " << s;
+
+
+
+
 
     float x1, x2, y1, y2, p, s;
     std::cout << "Write A(x1;y1), B(x2;y2) points coortinates. C(0;0)\n";
@@ -269,4 +299,17 @@ void RectPS(float x1, float y1, float x2, float y2, float&p, float&s) {
     p = a + b + c;
     s = a * b / 2;
     
+}
+void DigitCountSum(int k, int& c, int& s) {
+    while (k % 10) {
+        s += k % 10;
+        c++;
+        k /= 10;
+    }
+}
+void Swap(float& x, float& y) {
+    float b;
+    b = x;
+    x = y;
+    y = b;
 }
