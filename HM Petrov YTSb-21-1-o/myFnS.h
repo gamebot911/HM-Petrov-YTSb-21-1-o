@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <string>
 
 const float pi = 3.14;
 
@@ -37,6 +38,18 @@ struct Points {
     float xC,yC;
 
 };
+struct workers {
+    std::string (Familia);
+    int vozrast;
+    std::string(specialnost);
+    int sr_oclad;
+};
+struct pasajars {
+    std::string names;
+    
+};
+
+
 
 
 void RectPS(float x1, float y1, float x2, float y2, float& p, float& s) {

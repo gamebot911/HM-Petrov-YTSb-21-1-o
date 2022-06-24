@@ -6,9 +6,118 @@
 
 int main(){
 
+
+    //15-16 неделя
+    srand(5);
+
+
+    /*
+
+    int x;
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j=0; j < 10; j++) {
+            a[i][j] = rand() % 81-30;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n";
+    x = a[0][0];
+    int lin;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (x > a[i][j]) {
+                x = a[i][j];
+                lin = i;
+            }
+        }
+    }
+
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (i==lin) 
+                a[i][j]=0;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+
+
+
+
+
+
+
     //13-14 неделя
     srand(1356);
+    int n;
+    std::cin >> n;
+    for (int i = 0; i < n; i++) {
+        std::cout << "Write pasajer Names \n";
+        std::cin.getline(pasajars.i names);
+        std::cout << pasajars.names;
+    }
+    };
 
+
+    workers w1,w2,w3,w4;
+    w1.Familia = "Petrov";
+    w1.specialnost = "Slesar";
+    w1.sr_oclad = 3000;
+    w1.vozrast = 21;
+
+    w2.Familia = "Ivanov";
+    w2.specialnost = "Tokar";
+    w2.sr_oclad = 3500;
+    w2.vozrast = 28;
+
+    w3.Familia =  "Shpunko";
+    w3.specialnost = "Tokar";
+    w3.sr_oclad = 8000;
+    w3.vozrast = 13;
+
+    w4.Familia = "Homova";
+    w4.specialnost = "Tokar";
+    w4.sr_oclad = 1000;
+    w4.vozrast = 19;
+
+    struct workers zavod1[2]{
+    w1,
+    w2
+    };
+    struct workers zavod2[2]{
+    w3,
+    w4
+    };
+    int tok, sles;
+    tok = 0;
+    sles = 0;
+    std::cout << "Zavod 1 \n";
+    for (int i = 0; i < 2; i++) {
+        if (zavod1[i].specialnost == "Slesar") {
+            sles += 1;
+        }
+        if (zavod1[i].specialnost == "Tokar") {
+            tok += 1;
+        }
+        std::cout << zavod1[i].Familia << " " << zavod1[i].specialnost << " " << zavod1[i].sr_oclad << " rub " << zavod1[i].vozrast<<" years\n";
+    }
+    std::cout << "In first Zavod works " << sles << " slesorei, and " << tok << " tokarei \n\n";
+
+    std::cout << "Zavod 2 \n";
+    for (int i = 0; i < 2; i++) {
+        if (zavod2[i].specialnost == "Slesar") {
+            sles += 1;
+        }
+        if (zavod2[i].specialnost == "Tokar") {
+            tok += 1;
+        }
+        std::cout << zavod2[i].Familia << " " << zavod2[i].specialnost << " " << zavod2[i].sr_oclad << " rub " << zavod2[i].vozrast << " years\n";
+    }
+    std::cout << "In first Zavod works " << sles << " slesorei, and " << tok << " tokarei \n\n";
+
+    
  
 
 
@@ -16,7 +125,7 @@ int main(){
 
 
 
-/*
+
     std::array<int, 10>a;
     for (int i = 0; i < 10; i++) {
         a[i] = rand() % 80;
