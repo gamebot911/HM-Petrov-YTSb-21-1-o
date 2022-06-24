@@ -8,14 +8,15 @@ int main(){
 
 
     //15-16 неделя
-    srand(5);
-
-
-
-
-
-
-
+    srand(1);
+    std::array<std::array < int, 2>,10>b;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 10; j++) {
+            b[i][j] = rand() & 3;
+            std::cout << b[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
 
 
     /*
