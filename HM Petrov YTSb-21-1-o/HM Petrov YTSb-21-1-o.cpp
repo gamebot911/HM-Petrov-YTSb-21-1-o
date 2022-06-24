@@ -7,14 +7,40 @@
 int main(){
 
     //13-14 неделя
-
-
-
-
-
-
-
     srand(1356);
+
+ 
+
+
+
+
+
+
+/*
+    std::array<int, 10>a;
+    for (int i = 0; i < 10; i++) {
+        a[i] = rand() % 80;
+        std::cout << a[i] << " ";
+    }
+    std::cout << "\n";
+    std::array<int, 10>b;
+    for (int i = 0; i < 10; i++) {
+        b[i] = rand() % 80;
+        std::cout << b[i] << " ";
+    }
+    std::cout <<"\n";
+    std::array<int, 10>c;
+    for (int i = 0; i < 10; i++) {
+        c[i] = a[i] - b[i];
+        std::cout << c[i] << " ";
+    }
+    std::cout << "\n";
+
+
+
+
+
+
     std::array<int, 20>numb;
     for (int i = 0; i < 20; i++) {
         numb[i] = rand() % 31-10;
@@ -169,7 +195,7 @@ int main(){
     std::cout << "\n";
 
 
-    /*
+    
 
 
 
