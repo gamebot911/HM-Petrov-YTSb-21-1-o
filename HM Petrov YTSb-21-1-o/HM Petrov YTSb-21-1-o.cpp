@@ -5,15 +5,39 @@
 
 int main(){
 
+
+
+
+
+
+
+ /*
     //11-12 неделя
 
+    Rob_Car car1;
+    car1.speed = 85;
+    car1.time = 15;
+    car1.number = 1;
+
+    std::cout << "Way = " << RCway(car1) << '\n';
 
 
 
 
 
 
-/*
+    Rob_Plane p1;
+    p1.propeller_speed = 1800;
+    p1.screw_radius = 2;
+    p1.thrust_coefficient = 25;
+
+    std::cout << "Trust robot-plane =" << ThrustP(p1) << '\n';
+
+
+
+
+
+
 
     Sensor s1, s2;
     s1.val_min = 1;
@@ -462,24 +486,23 @@ int main(){
             std::cout << "\n";
         }
 
-
-        //6 неделя
-        float x, y;
-        float r = 1;
-        std::cout << "Write X and Y coordinate \n";
-        std::cin >> x >> y;
-        float l = sqrt(x * x + y * y);
-        if (l < r) {
-            if (y < (x/2)) {
-                std::cout << "Yes, your point in the area";
-             }
-            else {
-                std::cout << "No, your point not in the area";
-             }
+    //6 неделя
+    Points a;
+    float r = 1;
+    std::cout << "Write X and Y coordinate \n";
+    std::cin >> a.xC >> a.yC;
+    float l = sqrt(a.xC * a.xC + a.yC * a.yC);
+    if (l < r) {
+        if (a.yC < (a.xC / 2)) {
+            std::cout << "Yes, your point in the area";
         }
         else {
-            std::cout << "No";
+            std::cout << "No, your point not in the area";
         }
+    }
+    else {
+        std::cout << "No, your point not in the area";
+    }
 
 
 

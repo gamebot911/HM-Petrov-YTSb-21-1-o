@@ -22,6 +22,21 @@ struct Sensor {
     float mis;
     float max_spd;
 };
+struct Rob_Plane {
+    float propeller_speed;
+    float screw_radius;
+    float thrust_coefficient;
+};
+struct Rob_Car {
+    float speed;
+    float time;
+    float number;
+
+};
+struct Points {
+    float xC,yC;
+
+};
 
 
 void RectPS(float x1, float y1, float x2, float y2, float& p, float& s) {
@@ -366,4 +381,12 @@ void SenMedMS(struct Sensor a, struct Sensor b) {
 
     float medms = (a.mis + b.mis) / 2;
     std::cout << "Medium accurates = " << medms << '\n';
+}
+float ThrustP(struct Rob_Plane a) {
+    float t;
+    t = a.propeller_speed * a.screw_radius * a.thrust_coefficient;
+    return t;
+}
+float RCway(struct Rob_Car a) {
+    return a.speed * a.time;
 }
