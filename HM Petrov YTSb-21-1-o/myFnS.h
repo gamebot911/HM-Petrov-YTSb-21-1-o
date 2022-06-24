@@ -17,6 +17,12 @@ struct Robots {
     float weight;
     float max_speed;
 };
+struct Sensor {
+    float val_max, val_min;
+    float mis;
+    float max_spd;
+};
+
 
 void RectPS(float x1, float y1, float x2, float y2, float& p, float& s) {
     /*Описать функцию RectPS(x1, y1, x2, y2, P, S), вычисляющую периметр P и площадь
@@ -264,4 +270,100 @@ void RobSml(struct Robots a, struct Robots b) {
         std::cout << "Weight =" << b.weight << "\n";
         std::cout << "Maximum speed =" << b.max_speed << "\n";
     }
+}
+void RobSpd(struct Robots a, struct Robots b) {
+    /*Вывести
+данные о самом тяжёлом роботе.*/
+
+    float sml = a.weight;
+    if (sml > b.weight) {
+        std::cout << "First robot is heavier\n";
+        std::cout << "Dimensions =" << a.dim << "\n";
+        std::cout << "Weight =" << a.weight << "\n";
+        std::cout << "Maximum speed =" << a.max_speed << "\n";
+    }
+    else {
+        std::cout << "Second robot is heavier\n";
+        std::cout << "Dimensions =" << b.dim << "\n";
+        std::cout << "Weight =" << b.weight << "\n";
+        std::cout << "Maximum speed =" << b.max_speed << "\n";
+    }
+}
+void RobHeh(struct Robots a, struct Robots b) {
+    /*Вывести
+данные о самом быстром роботе.*/
+
+    float sml = a.max_speed;
+    if (sml > b.max_speed) {
+        std::cout << "First robot is heavier\n";
+        std::cout << "Dimensions =" << a.dim << "\n";
+        std::cout << "Weight =" << a.weight << "\n";
+        std::cout << "Maximum speed =" << a.max_speed << "\n";
+    }
+    else {
+        std::cout << "Second robot is heavier\n";
+        std::cout << "Dimensions =" << b.dim << "\n";
+        std::cout << "Weight =" << b.weight << "\n";
+        std::cout << "Maximum speed =" << b.max_speed << "\n";
+    }
+}
+void SenMS(struct Sensor a, struct Sensor b) {
+    /*Вывести данные о самом точном датчике.*/
+
+    float sml = a.mis;
+    if (sml < b.mis) {
+        std::cout << "First sensor is most accurate\n";
+        std::cout << "Max and Min values =" << a.val_max <<" and "<< a.val_min<< "\n";
+        std::cout << "Accurate =" << a.mis << "\n";
+        std::cout << "Maximum speed =" << a.max_spd << "\n";
+    }
+    else {
+        std::cout << "Second sensor is most accurate\n";
+        std::cout << "Max and Min values =" << b.val_max << " and " << b.val_min<< "\n";
+        std::cout << "Accurate =" << b.mis << "\n";
+        std::cout << "Maximum speed =" << b.max_spd << "\n";
+    }
+}
+void SenLS(struct Sensor a, struct Sensor b) {
+    /*Вывести данные о датчике с наименьшей
+скоростью работы..*/
+
+    float sml = a.max_spd;
+    if (sml < b.max_spd) {
+        std::cout << "First sensor is slowerst\n";
+        std::cout << "Max and Min values =" << a.val_max << " and " << a.val_min << "\n";
+        std::cout << "Accurate =" << a.mis << "\n";
+        std::cout << "Maximum speed =" << a.max_spd << "\n";
+    }
+    else {
+        std::cout << "Second sensor is slowerst\n";
+        std::cout << "Max and Min values =" << b.val_max << " and " << b.val_min << "\n";
+        std::cout << "Accurate =" << b.mis << "\n";
+        std::cout << "Maximum speed =" << b.max_spd << "\n";
+    }
+}
+void SenHV(struct Sensor a, struct Sensor b) {
+    /*Вывести данные о датчике с наибольшим
+диапазоном значений.*/
+
+    float sml = a.val_max-a.val_min;
+    if (sml > (b.val_max-b.val_min)) {
+        std::cout << "First sensor volume is bigger\n";
+        std::cout << "Max and Min values =" << a.val_max << " and " << a.val_min << "\n";
+        std::cout << "Accurate =" << a.mis << "\n";
+        std::cout << "Maximum speed =" << a.max_spd << "\n";
+    }
+    else {
+        std::cout << "Second sensor volume is bigger\n";
+        std::cout << "Max and Min values =" << b.val_max << " and " << b.val_min << "\n";
+        std::cout << "Accurate =" << b.mis << "\n";
+        std::cout << "Maximum speed =" << b.max_spd << "\n";
+    }
+}
+void SenMedMS(struct Sensor a, struct Sensor b) {
+    /*Вывести среднюю погрешность работы двух
+датчиков.*/
+
+    float medms = (a.mis + b.mis) / 2;
+    std::cout << "Medium accurates = " << medms << '\n';
 }

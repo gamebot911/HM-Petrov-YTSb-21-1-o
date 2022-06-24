@@ -11,7 +11,67 @@ int main(){
 
 
 
+
+
 /*
+
+    Sensor s1, s2;
+    s1.val_min = 1;
+    s1.val_max = 10;
+    s1.mis = 5;
+    s1.max_spd = 15;
+
+    s2.val_min = 0.5;
+    s2.val_max = 25;
+    s2.mis = 1.5;
+    s2.max_spd = 16;
+
+    SenMS(s1, s2);
+    std::cout << "\n";
+    SenLS(s1, s2);
+    std::cout << "\n";
+    SenHV(s1, s2);
+    std::cout << "\n";
+    SenMedMS(s1, s2);
+
+
+    
+
+
+
+    Robots r1, r2;
+    r1.dim = 50;
+    r1.weight = 116;
+    r1.max_speed = 5;
+
+    r2.dim = 18;
+    r2.weight = 60;
+    r2.max_speed = 1;
+
+    RobSpd(r1, r2);
+
+
+
+
+
+
+
+    Robots r1, r2;
+    r1.dim = 10;
+    r1.weight = 135;
+    r1.max_speed = 18;
+
+    r2.dim = 9;
+    r2.weight = 100;
+    r2.max_speed = 13;
+
+    RobHeh(r1, r2);
+
+
+
+
+
+
     Robots r1, r2;
     r1.dim = 120;
     r1.weight = 15;
