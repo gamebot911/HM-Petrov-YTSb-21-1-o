@@ -11,8 +11,21 @@ int main(){
     srand(5);
 
 
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            a[i][j] = rand() % 81 - 30;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n\n";
 
-
+    int sum_diag=0;
+    for (int i = 0; i < 10; i++) {
+        sum_diag += a[i][i];
+    }
+    std::cout << "GLav diag sum =" << sum_diag << "\n";
 
 
 
