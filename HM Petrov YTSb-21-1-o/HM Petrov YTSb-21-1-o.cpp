@@ -11,7 +11,46 @@ int main(){
     srand(5);
 
 
-    /*
+
+
+
+
+
+
+
+
+
+/*
+    int x = 0;
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+                a[i][j] = rand() % 5;
+            std::cout << a[i][j] << " ";
+            if (j == 1)
+                x = a[i][j];
+        }
+        for (int k = 0; k < 10; k++) {
+            a[i][k] *= x;
+        }
+        std::cout << "\n";
+    }
+        std::cout << "\n";
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                std::cout << a[i][j] << " ";
+            }
+            std::cout << "\n";
+        }
+    
+
+
+
+
+
+
+
+
 
     int x;
     std::array < std::array< int, 10>, 10 > a;
@@ -50,6 +89,7 @@ int main(){
 
 
     //13-14 неделя
+
     srand(1356);
     int n;
     std::cin >> n;
