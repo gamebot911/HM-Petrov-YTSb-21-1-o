@@ -1,17 +1,180 @@
 ﻿#include <iostream>
 #include <cmath>
+#include <array>
 #include "myFnS.h"
 
 
 int main(){
 
+    //13-14 неделя
 
 
 
 
 
 
- /*
+
+    srand(1356);
+    std::array<int, 20>numb;
+    for (int i = 0; i < 20; i++) {
+        numb[i] = rand() % 31-10;
+        std::cout << numb[i] << " ";
+    }
+    std::cout << "\n";
+
+    int s = 0;
+    for (int i = 0; i < 20; i++) {
+        if (SumNarr(numb[i], 5, 2)) {
+            s += numb[i];
+        }
+    }
+    std::cout << "Summ numbers > 5 =" << s << "\n";
+
+    s=0;
+    for (int i = 0; i < 20; i++) {
+        if (SumNarr(numb[i], 7, 1)) {
+            s += numb[i];
+        }
+    }
+    std::cout << "Summ numbers < 7 =" << s << "\n";
+
+    s = 0;
+    for (int i = 0; i < 20; i++) {
+        if (SumNarr(numb[i], 3, 2)) {
+            s += numb[i];
+        }
+    }
+    std::cout << "Summ numbers > 3 =" << s << "\n";
+
+    s = 0;
+    for (int i = 0; i < 20; i++) {
+        if (numb[i]%2 == 0) {
+            s += numb[i];
+            numb[i] *= 2;
+        }
+    }
+    std::cout << "Sum of even numbers  =" << s << "\n";
+    std::cout << "All even numbers *2 array: \n";
+        for (int i = 0; i < 20; i++) {
+            std::cout << numb[i] << " ";
+        }
+    std::cout << "\n";
+
+    s = 0;
+    for (int i = 0; i < 20; i++) {
+        if (numb[i] % 2 != 0) {
+            s += numb[i];
+            numb[i] += 3;
+        }
+    }
+    std::cout << "Sum of odd numbers  =" << s << "\n";
+    std::cout << "All odd numbers +3 array: \n";
+    for (int i = 0; i < 20; i++) {
+        std::cout << numb[i] << " ";
+    }
+    std::cout << "\n";
+
+    std::cout << "All (numbers < 0) +5 and all (numbers >0) -1 \n";
+    for (int i = 0; i < 20; i++) {
+        if (numb[i] > 0)
+            numb[i] -= 1;
+        if (numb[i] <= 0)
+            numb[i] += 5;
+        
+        std::cout << numb[i] << " ";
+    }
+    std::cout << "\n";
+
+    s = 1;
+    int sr = 0;
+    float srAr=0;
+    for (int i = 0; i < 20; i++) {
+        if (numb[i] > 0) {
+            s *= numb[i];
+            sr += numb[i];
+            srAr++;
+        }
+    }
+    std::cout << "Posirive numbers in array =" << srAr << "\n";
+    std::cout << "Numbers > 0 = " << srAr << "\n";
+    srAr = sr / srAr;
+    std::cout << "Arithmetic mean of positive =" << srAr << "\n";
+    std::cout << "Product of positive numbers  =" << s << "\n";
+
+    s = 1;
+    sr = 0;
+    srAr = 0;
+    for (int i = 0; i < 20; i++) {
+        if (numb[i] < 0) {
+            s *= numb[i];
+            sr += numb[i];
+            srAr++;
+        }
+    }
+    std::cout << "Negative numbers in array =" << srAr << "\n";
+    srAr = sr / srAr;
+    std::cout << "Arithmetic mean of negative =" << srAr << "\n";
+    std::cout << "Product of negative numbers  =" << s << "\n";
+
+    int h, nh,ns;
+    h = 0;
+    s = numb[1];
+    for (int i = 0; i < 20; i++) {
+        if (h < numb[i]) {
+            h = numb[i];
+            nh = i+1;
+        }
+        if (s > numb[i]) {
+            s = numb[i];
+            ns = i+1;
+        }
+    }
+    std::cout << "Smolest numbers = " << s << " and his number in array is " << ns << "\nBigger number = " << h << " and his number in array is " << nh << "\n";
+
+
+    h = 0;
+    s = numb[1];
+    for (int i = 0; i < 20; i++) {
+        if (h < abs(numb[i])) {
+            h = abs(numb[i]);
+            nh = i + 1;
+        }
+        if (s > abs(numb[i])) {
+            s = abs(numb[i]);
+            ns = i + 1;
+        }
+    }
+    std::cout << "Smolest the absolute value of a number = " << s << " and his number in array is " << ns << "\nBigger the absolute value of a number = " << h << " and his number in array is " << nh << "\n";
+
+    s = 0;
+    for (int i = 0; i < 20; i++) {
+        s += numb[i];
+    }
+    s = s / 20;
+    std::cout << "Numbers < then arithmetic mean: \n";
+    for (int i = 0; i < 20; i++) {
+        if ((numb[i] < s) && (numb[i] != 0)) {
+            std::cout << numb[i] << " ";
+        }
+    }
+    std::cout << "\n";
+
+
+    for (int i = 0; i < 20; i++) {
+        if (numb[i] < 0) {
+            numb[i] = 0;
+        }
+        std::cout << numb[i]<<" ";
+    }
+    std::cout << "\n";
+
+
+    /*
+
+
+
+
+
     //11-12 неделя
 
     Rob_Car car1;

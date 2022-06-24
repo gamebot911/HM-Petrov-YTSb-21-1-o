@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <array>
 
 const float pi = 3.14;
 
@@ -389,4 +390,26 @@ float ThrustP(struct Rob_Plane a) {
 }
 float RCway(struct Rob_Car a) {
     return a.speed * a.time;
+}
+bool SumNarr(int a, int b, int us) {
+    switch (us)
+    {
+    case 1:
+        if (a < b)
+            return true;
+        else
+            return false;
+        break;
+    case 2:
+        if (a > b)
+            return true;
+        else
+            return false;
+        break;
+    case 3:
+        if (a == b)
+            return true;
+
+    }
+    
 }
