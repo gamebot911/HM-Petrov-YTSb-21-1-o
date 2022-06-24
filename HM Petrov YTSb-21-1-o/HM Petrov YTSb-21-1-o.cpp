@@ -10,7 +10,43 @@ int main(){
     //15-16 неделя
     srand(1);
 
+
+
+
+
+
+
+
+
+
+
     /*
+    float storm = 0;
+    int day;
+    int b[2][31];
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 31; j++) {
+            b[i][j] = rand() % 10;
+            std::cout << b[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n";
+    for (int i = 0; i < 31; i++) {
+        if (b[1][i] * b[2][i] > storm)
+            storm = b[1][i] * b[2][i];
+            day = i;
+    }
+    std::cout << "Strongger Storm has been in " << day << " day\n";
+
+
+
+
+
+
+
+
+
     int mx;
     std::array < std::array< int, 10>, 10 > a;
     for (int i = 0; i < 10; i++) {
