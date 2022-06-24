@@ -1,10 +1,21 @@
 ﻿#pragma once
 
 const float pi = 3.14;
+
 struct myTime {
     int hour;
     int minutes;
     int seconds;
+};
+struct Complex {
+    float re;
+    float im;
+
+};
+struct Robots {
+    float dim;
+    float weight;
+    float max_speed;
 };
 
 void RectPS(float x1, float y1, float x2, float y2, float& p, float& s) {
@@ -215,7 +226,6 @@ void yotx(float x, float& y) {
     if (x < 3)
         y = (2 * x + 1) * (2 * x + 1);
 }
-
 bool timeS(struct myTime a, struct myTime b) {
     /*Написать функцию, которая сравнивает два времени. Возвращает true, если
 первый аргумент больше второго.*/
@@ -227,4 +237,31 @@ bool timeS(struct myTime a, struct myTime b) {
         return true;
     else
         return false;
+}
+void ComplexRel(struct Complex a, struct Complex b) {
+    /*Напишите функцию, которая будет сравнивать вещественную часть
+комплексного числа.*/
+
+    if (a.re > b.re)
+        std::cout << "First real part > Second real part\n";
+    else
+        std::cout << "Second real part > First real part\n";
+}
+void RobSml(struct Robots a, struct Robots b) {
+    /*Вывести
+данные о самом маленьком роботе.*/
+
+    float sml = a.dim;
+    if (sml < b.dim) {
+        std::cout << "First robot is smoller\n";
+        std::cout << "Dimensions =" << a.dim << "\n";
+        std::cout << "Weight =" << a.weight << "\n";
+        std::cout << "Maximum speed =" << a.max_speed << "\n";
+    }
+    else {
+        std::cout << "Second robot is smoller\n";
+        std::cout << "Dimensions =" << b.dim << "\n";
+        std::cout << "Weight =" << b.weight << "\n";
+        std::cout << "Maximum speed =" << b.max_speed << "\n";
+    }
 }

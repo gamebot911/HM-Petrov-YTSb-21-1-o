@@ -11,10 +11,32 @@ int main(){
 
 
 
-
-
-
 /*
+    Robots r1, r2;
+    r1.dim = 120;
+    r1.weight = 15;
+    r1.max_speed = 10;
+    
+    r2.dim = 80;
+    r2.weight = 168;
+    r2.max_speed = 5;
+
+    RobSml(r1, r2);
+
+
+
+
+
+    Complex k1, k2;
+    std::cout << "Write First and Second Complex numbers, imaginary and real parts\n";
+    std::cin >> k1.im >> k1.re >> k2.im >> k2.re;
+    ComplexRel(k1,k2);
+
+
+
+
+
+
     myTime t1,t2;
 
     std::cout << "Write First time Hour Minutes Seconds\n";
