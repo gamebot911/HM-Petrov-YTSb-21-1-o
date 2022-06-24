@@ -11,6 +11,120 @@ int main(){
     srand(5);
 
 
+
+
+
+
+
+
+
+    /*
+    int mx;
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            a[i][j] = rand() % 81 - 30;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n\n";
+    mx = a[0][0];
+    for (int i = 0; i < 10; i++) {
+        for (int j=0; j < 10; j++) {
+            if (mx < a[i][j])
+                mx = a[i][j];
+        }
+        for (int j=0; j < 10; j++) {
+            a[i][j] = mx;
+            std::cout << a[i][j] << " ";
+        }
+        mx = 0;
+        std::cout << "\n";
+    }
+
+
+
+
+
+
+
+
+
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            a[i][j] = rand() % 81 - 30;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n\n";
+    int low = a[0][0];
+    int l;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (low > a[i][j]) {
+                low = a[i][j];
+                l = j;
+            }
+        }
+        a[i][l] = a[i][i];
+        a[i][i] = low;
+    }
+    std::cout << "\n";
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+
+
+
+
+
+
+
+
+    std::array < std::array< int, 10>, 10 > a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            a[i][j] = rand() % 81 - 30;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n\n";
+
+    int sum_plg ,x;
+    sum_plg = 0;
+
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+           x = i + 1;
+        }
+        else
+            x = i + 2;
+        for (int j = x; j < 10; j += 2) {
+            if (a[i][j] > 0)
+                sum_plg += a[i][j];
+            if ((a[i][i] > 0) && (i%2 == 0))
+                sum_plg += a[i][i];
+            std::cout << a[i][j]<< " "<< a[i][i]<<" ";
+        }
+    }
+    std::cout << "\n";
+    std::cout << "Sum all even numbers heiare glavnaia diagonal = " << sum_plg << "\n";
+
+
+
+
+
+
+
+
+
     std::array < std::array< int, 10>, 10 > a;
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
@@ -23,6 +137,7 @@ int main(){
 
     int sum_diag=0;
     for (int i = 0; i < 10; i++) {
+        if(a[i][i]<0)
         sum_diag += a[i][i];
     }
     std::cout << "GLav diag sum =" << sum_diag << "\n";
@@ -33,7 +148,7 @@ int main(){
 
 
 
-/*
+
     int x = 0;
     std::array < std::array< int, 10>, 10 > a;
     for (int i = 0; i < 10; i++) {
