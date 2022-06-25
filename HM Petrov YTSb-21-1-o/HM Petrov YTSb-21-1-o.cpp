@@ -1044,6 +1044,10 @@ int main(){
         }
 
     //6 неделя
+
+
+
+
     Points a;
     float r = 1;
     std::cout << "Write X and Y coordinate \n";
