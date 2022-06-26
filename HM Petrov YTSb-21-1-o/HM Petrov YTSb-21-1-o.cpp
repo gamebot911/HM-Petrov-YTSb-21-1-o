@@ -12,36 +12,19 @@ int main(){
 
     srand(1356);
 
-    //Реализовать сложение, вычитание, умножение, транспонирование матриц (разрешается фиксированный размер матриц).
-
-
-    int act = 0;
-    int a[10][10];
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
-            a[i][j] = rand() % 101 - 100;
-            std::cout << a[i][j] << " ";
-        }
-        std::cout << "\n";
-    }
-
-    int b[10][10];
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
-            a[i][j] = rand() % 81 - 30;
-            std::cout << a[i][j] << " ";
-        }
-        std::cout << "\n";
-    }
-
-    std::cout << "Write whot you want to do with matrix A and B: 1=A+B, 2=A-B, 3=A*B, 4=Transponire A and B \n";
-    std::cin >> act;
-    MatrixCalc(a, b, act);
-
-
-
 
     /*
+    //Реализовать сложение, вычитание, умножение, транспонирование матриц (разрешается фиксированный размер матриц).
+
+    int act = 0;
+    std::cout << "Write whot you want to do with matrix A and B: 1=A+B, 2=A-B, 3=A*B, 4=Transponire A and B \n";
+    std::cin >> act;
+    MatrixCalc(act);
+
+
+
+
+  
 
     //Объявить, реализовать заполнение данными с клавиатуры ИЛИ из файла и вывести
     //на экран матрицу, описывающую следующие сущности.Предложите свой вариант.
@@ -1214,4 +1197,6 @@ int main(){
             std::cout << "y = " << y << "\n";
             */
 }
+
+
 

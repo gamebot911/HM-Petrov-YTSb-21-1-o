@@ -427,58 +427,79 @@ bool SumNarr(int a, int b, int us) {
     }
     
 }
+void MatrixCalc(int act) {
+    //Реализовать сложение, вычитание, умножение, транспонирование матриц (разрешается фиксированный размер матриц).
 
-void MatrixCalc(std::array<std::array<int,10>,10>a, std::array<std::array<int, 10>, 10>b, int act) {
-
-
+    std::cout << "A matrix:\n";
+    std::array<std::array < int, 10>, 10>a;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            a[i][j] = rand() %5;
+            std::cout << a[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n";
+    std::cout << "B matrix:\n";
+    std::array<std::array < int, 10>, 10>b;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            b[i][j] = rand() %3;
+            std::cout << b[i][j] << " ";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "\n";
     switch (act) {
     case 1:
-        std::cout << "Sum matrix A and B = C:";
+        std::cout << "Sum matrix A and B = C:\n";
         std::array<std::array < int, 10>, 10>c;
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 c[i][j] = a[i][j] + b[i][j];
                 std::cout << c[i][j] << " ";
             }
-            std::cout <<"\n";
+            std::cout << "\n";
         }
         break;
     case 2:
-        std::cout << "Difference matrix A and B = C:";
-        std::array<std::array < int, 10>, 10>c;
+        std::cout << "Difference matrix A and B = C:\n";
+        std::array<std::array < int, 10>, 10>k;
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                c[i][j] = a[i][j] - b[i][j];
-                std::cout << c[i][j] << " ";
+                k[i][j] = a[i][j] - b[i][j];
+                std::cout << k[i][j] << " ";
             }
             std::cout << "\n";
         }
         break;
     case 3:
-        std::cout << "Difference matrix A and B = C:";
-        std::array<std::array < int, 10>, 10>c;
+        std::cout << " Product of matrix A and B = C:\n";
+        std::array<std::array < int, 10>, 10>h;
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
+                h[i][j] = 0;
                 for (int s = 0; s < 10; s++) {
-                    c[i][j] += a[i][s] * b[s][j];
+                    h[i][j] += a[i][s] * b[s][j];
                 }
-                std::cout << c[i][j] << " ";
+                std::cout << h[i][j] << " ";
             }
             std::cout << "\n";
         }
         break;
     case 4:
-        std::cout << "Transpone A:";
+        std::cout << "Transpone A:\n";
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 std::cout << a[j][i] << " ";
             }
             std::cout << "\n";
         }
-        std::cout << "Transpone B:";
+        std::cout << "\n";
+        std::cout << "Transpone B:\n";
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                std::cout << a[j][i] << " ";
+                std::cout << b[j][i] << " ";
             }
             std::cout << "\n";
         }
