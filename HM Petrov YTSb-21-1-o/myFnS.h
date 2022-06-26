@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <string>
+#include<array>
 
 const float pi = 3.14;
 
@@ -425,4 +426,62 @@ bool SumNarr(int a, int b, int us) {
 
     }
     
+}
+
+void MatrixCalc(std::array<std::array<int,10>,10>a, std::array<std::array<int, 10>, 10>b, int act) {
+
+
+    switch (act) {
+    case 1:
+        std::cout << "Sum matrix A and B = C:";
+        std::array<std::array < int, 10>, 10>c;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+                std::cout << c[i][j] << " ";
+            }
+            std::cout <<"\n";
+        }
+        break;
+    case 2:
+        std::cout << "Difference matrix A and B = C:";
+        std::array<std::array < int, 10>, 10>c;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                c[i][j] = a[i][j] - b[i][j];
+                std::cout << c[i][j] << " ";
+            }
+            std::cout << "\n";
+        }
+        break;
+    case 3:
+        std::cout << "Difference matrix A and B = C:";
+        std::array<std::array < int, 10>, 10>c;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int s = 0; s < 10; s++) {
+                    c[i][j] += a[i][s] * b[s][j];
+                }
+                std::cout << c[i][j] << " ";
+            }
+            std::cout << "\n";
+        }
+        break;
+    case 4:
+        std::cout << "Transpone A:";
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                std::cout << a[j][i] << " ";
+            }
+            std::cout << "\n";
+        }
+        std::cout << "Transpone B:";
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                std::cout << a[j][i] << " ";
+            }
+            std::cout << "\n";
+        }
+        break;
+    }
 }
