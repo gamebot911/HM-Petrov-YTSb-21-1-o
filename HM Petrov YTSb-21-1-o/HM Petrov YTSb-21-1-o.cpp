@@ -18,6 +18,33 @@ int main(){
 
 
 
+    /*
+
+    int m[2][10];
+
+    for (int i = 0; i < 10; i++) {
+        m[0][i] = rand() % 100;
+        m[1][i] = rand() % 4;
+    }
+    struct PowMot {
+        int number;
+        int power;
+    };
+    PowMot mox{ 0, 0 };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 10; j++) {
+            std::cout << m[i][j] << " ";
+            if ((m[1][j] == 3) && (m[0][j] > mox.power)) {
+                mox.number = j + 1;
+                mox.power = m[0][j];
+            }
+        }
+        std::cout << "\n";
+    }
+    std::cout << "Number of best motor " << mox.number << " and his power is " << mox.power << "%\n";
+
+
+
 
 
     
@@ -46,7 +73,7 @@ int main(){
     std::cout << "Strongger Storm has been in " << day << " day\n" << storm;
 
 
-/*
+
 
 
 
