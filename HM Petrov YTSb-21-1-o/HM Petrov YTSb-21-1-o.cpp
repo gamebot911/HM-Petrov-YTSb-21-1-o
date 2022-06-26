@@ -8,7 +8,7 @@ int main(){
 
 
     //15-16 неделя
-    srand(1);
+    srand(1356);
 
 
 
@@ -20,13 +20,13 @@ int main(){
 
 
 
-    /*
+    
 
 
 
     //Дана матрица. Элементы первой строки — количество осадков в соответствующий день, второй строки — сила ветра в этот день. Найти, был ли в эти дни ураган? (ураган — когда самый сильный ветер был в самый дождливый день).
 
-    float storm = 0;
+    int storm = 0;
     int day;
     int b[2][31];
     for (int i = 0; i < 2; i++) {
@@ -38,14 +38,15 @@ int main(){
     }
     std::cout << "\n";
     for (int i = 0; i < 31; i++) {
-        if (b[1][i] * b[2][i] > storm)
-            storm = b[1][i] * b[2][i];
-            day = i;
+        if (b[0][i] * b[1][i] > storm) {
+            storm = b[0][i] * b[1][i];
+            day = i+1;
+        }
     }
-    std::cout << "Strongger Storm has been in " << day << " day\n";
+    std::cout << "Strongger Storm has been in " << day << " day\n" << storm;
 
 
-
+/*
 
 
 
