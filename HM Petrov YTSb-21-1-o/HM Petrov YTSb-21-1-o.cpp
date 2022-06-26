@@ -20,6 +20,8 @@ int main(){
 
     /*
 
+    //Дана матрица. Элементы первой строки — мощность электромотора, второй строки — категория мотора (число от 1 до 3). Найти самый мощный мотор категории 3.
+
     int m[2][10];
 
     for (int i = 0; i < 10; i++) {
@@ -41,7 +43,7 @@ int main(){
         }
         std::cout << "\n";
     }
-    std::cout << "Number of best motor " << mox.number << " and his power is " << mox.power << "%\n";
+    std::cout << "Number of best motor " << mox.number << " and his power is " << mox.power << "watt\n";
 
 
 
